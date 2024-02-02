@@ -3,13 +3,13 @@ using Mission4;
 
 tictactoetools ttt = new tictactoetools();
 
-Console.WriteLine("Welcome to our game of tic-tac-toe!");
-
+Console.WriteLine("Welcome to our game of tic-tac-toe! Each square has a number 0-8 starting at the top left");
+Console.WriteLine("and increasing as you go to the right and down (just like reading a book.");
 //• Create a game board array to store the players’ choices
 string[] board = new string[9];
 for (int i = 0; i < board.Length; i++)
 {
-    board[i] = string.Empty;
+    board[i] = " ";
 }
 
 
@@ -43,7 +43,7 @@ while (!gameWon && !boardFull)
         }
     }
    
-    if (board[currentPick] == "")
+    if (board[currentPick] == " ")
     {
         board[currentPick] = currentPlayer;
 
@@ -53,9 +53,9 @@ while (!gameWon && !boardFull)
         //switch player's turn only if no one won
         if (currentPlayer == "X" && !gameWon)
         {
-            currentPlayer = "Y";
+            currentPlayer = "O";
         }
-        else if (currentPlayer == "Y" && !gameWon)
+        else if (currentPlayer == "O" && !gameWon)
         {
             currentPlayer = "X";
         }
@@ -66,7 +66,7 @@ while (!gameWon && !boardFull)
     }
     
     //check if the board is full
-    boardFull = !Array.Exists(board, element => element == "");
+    boardFull = !Array.Exists(board, element => element == " ");
 
     //print the board after each turn
     ttt.printBoard(board);
@@ -79,7 +79,7 @@ if (gameWon)
 }
 else
 {
-    Console.WriteLine("ITS CATS!");
+    Console.WriteLine("ITS CATS! (Tie Game)");
 }
 
 

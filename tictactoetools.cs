@@ -12,26 +12,36 @@ namespace Mission4
         // Receive the Game Board Array
         public bool checkWin(string[] arr)
         {
-            string[] checkWin = arr;
+            string[] checkWin = (string[])arr;
 
-            if ((checkWin[0] == checkWin[1] && checkWin[1] == checkWin[2]) ||
-                (checkWin[3] == checkWin[4] && checkWin[4] == checkWin[5]) ||
-                (checkWin[6] == checkWin[7] && checkWin[7] == checkWin[8]) ||
-                (checkWin[0] == checkWin[3] && checkWin[3] == checkWin[6]) ||
-                (checkWin[1] == checkWin[4] && checkWin[4] == checkWin[7]) ||
-                (checkWin[2] == checkWin[5] && checkWin[5] == checkWin[8]) ||
-                (checkWin[0] == checkWin[4] && checkWin[4] == checkWin[8]) ||
-                (checkWin[2] == checkWin[4] && checkWin[4] == checkWin[8]))
+            if ((checkWin[0] == checkWin[1] && checkWin[1] == checkWin[2] && checkWin[0] == "X") ||
+                (checkWin[3] == checkWin[4] && checkWin[4] == checkWin[5] && checkWin[3] == "X") ||
+                (checkWin[6] == checkWin[7] && checkWin[7] == checkWin[8] && checkWin[6] == "X") ||
+                (checkWin[0] == checkWin[3] && checkWin[3] == checkWin[6] && checkWin[0] == "X") ||
+                (checkWin[1] == checkWin[4] && checkWin[4] == checkWin[7] && checkWin[1] == "X") ||
+                (checkWin[2] == checkWin[5] && checkWin[5] == checkWin[8] && checkWin[2] == "X") ||
+                (checkWin[0] == checkWin[4] && checkWin[4] == checkWin[8] && checkWin[0] == "X") ||
+                (checkWin[2] == checkWin[4] && checkWin[4] == checkWin[8] && checkWin[2] == "X"))
             {
                 return true;
             }
-            else 
+            else if ((checkWin[0] == checkWin[1] && checkWin[1] == checkWin[2] && checkWin[0] == "O") ||
+                     (checkWin[3] == checkWin[4] && checkWin[4] == checkWin[5] && checkWin[3] == "O") ||
+                     (checkWin[6] == checkWin[7] && checkWin[7] == checkWin[8] && checkWin[6] == "O") ||
+                     (checkWin[0] == checkWin[3] && checkWin[3] == checkWin[6] && checkWin[0] == "O") ||
+                     (checkWin[1] == checkWin[4] && checkWin[4] == checkWin[7] && checkWin[1] == "O") ||
+                     (checkWin[2] == checkWin[5] && checkWin[5] == checkWin[8] && checkWin[2] == "O") ||
+                     (checkWin[0] == checkWin[4] && checkWin[4] == checkWin[8] && checkWin[0] == "O") ||
+                     (checkWin[2] == checkWin[4] && checkWin[4] == checkWin[8] && checkWin[2] == "O"))
             {
-                return false; 
+                return true;
             }
-            
-
+            else
+            {
+                return false;
+            }
         }
+
 
         public void printBoard(string[] board)
         {
