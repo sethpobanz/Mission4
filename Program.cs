@@ -1,11 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Mission4;
+//Section 2 group 7: Seth Pobanz, Madison Hutchings, Teigen Burrows, Martin Villar
+// Tic Tac Toe Game
 
+// create an instance of the tictactoe class
 tictactoetools ttt = new tictactoetools();
 
+//Welcome and explain the game play
 Console.WriteLine("Welcome to our game of tic-tac-toe! Each square has a number 0-8 starting at the top left");
 Console.WriteLine("and increasing as you go to the right and down (just like reading a book.");
-//• Create a game board array to store the players’ choices
+
+
+//• Create a game board array to store the players’ choices. Initialize them to a " "
 string[] board = new string[9];
 for (int i = 0; i < board.Length; i++)
 {
@@ -68,7 +74,7 @@ while (!gameWon && !boardFull)
     //check if the board is full
     boardFull = !Array.Exists(board, element => element == " ");
 
-    //print the board after each turn
+    //print the board after each turn 
     ttt.printBoard(board);
 }
 
