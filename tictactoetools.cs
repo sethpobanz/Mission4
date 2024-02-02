@@ -29,7 +29,7 @@ namespace Mission4
 
         }
 
-        static void PrintBoard()
+        static void PrintBoard(string[] board)
         {
             Console.WriteLine($" {board[0]} | {board[1]} | {board[2]} ");
             Console.WriteLine("---|---|---");
