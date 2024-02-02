@@ -26,7 +26,6 @@ while (!gameWon && !boardFull)
 {
     Console.WriteLine("Make your pick (0-8) player " + currentPlayer);
     int currentPick = 0;
-    //get there pick and parse it to an integer
 
     bool validInput = false;
 
@@ -82,5 +81,3 @@ else
 {
     Console.WriteLine("ITS CATS!");
 }
-
-
