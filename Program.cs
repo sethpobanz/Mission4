@@ -4,12 +4,16 @@ using Mission4;
 tictactoetools ttt = new tictactoetools();
 
 Console.WriteLine("Welcome to our game of tic-tac-toe!");
+
 //• Create a game board array to store the players’ choices
+string[] board = new string[8];
+for (int i = 0; i < board.Length; i++)
+{
+    board[i] = string.Empty;
+}
 
-//• Ask each player in turn for their choice and update the game board array
 
-//• Print the board by calling the method in the supporting class
-
+string currentPlayer = "X"; // Player 'X' goes first
 bool gameWon = false;
 bool boardFull = false;
 
@@ -21,9 +25,9 @@ ttt.printBoard(board);
 while (!gameWon && !boardFull)
 {
     Console.WriteLine("Make your pick (0-8) player " + currentPlayer);
-
+    int currentPick = 0;
     //get there pick and parse it to an integer
-    int currentPick;
+
     bool validInput = false;
 
     while (!validInput)
