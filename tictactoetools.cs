@@ -12,7 +12,7 @@ namespace Mission4
         // Receive the Game Board Array
         public bool checkWin(string[] arr)
         {
-            string[] checkWin = (string[])arr;
+            string[] checkWin = arr;
 
             if ((checkWin[0] == checkWin[1] && checkWin[1] == checkWin[2]) ||
                 (checkWin[3] == checkWin[4] && checkWin[4] == checkWin[5]) ||
@@ -25,11 +25,15 @@ namespace Mission4
             {
                 return true;
             }
-            return false;
+            else 
+            {
+                return false; 
+            }
+            
 
         }
 
-        static void printBoard(string[] board)
+        public void printBoard(string[] board)
         {
             Console.WriteLine($" {board[0]} | {board[1]} | {board[2]} ");
             Console.WriteLine("---|---|---");

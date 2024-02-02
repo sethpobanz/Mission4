@@ -6,7 +6,7 @@ tictactoetools ttt = new tictactoetools();
 Console.WriteLine("Welcome to our game of tic-tac-toe!");
 
 //• Create a game board array to store the players’ choices
-string[] board = new string[8];
+string[] board = new string[9];
 for (int i = 0; i < board.Length; i++)
 {
     board[i] = string.Empty;
@@ -26,7 +26,6 @@ while (!gameWon && !boardFull)
 {
     Console.WriteLine("Make your pick (0-8) player " + currentPlayer);
     int currentPick = 0;
-    //get there pick and parse it to an integer
 
     bool validInput = false;
 
@@ -43,13 +42,13 @@ while (!gameWon && !boardFull)
             Console.WriteLine("Invalid input, please choose a position between 0 and 8");
         }
     }
-
+   
     if (board[currentPick] == "")
     {
         board[currentPick] = currentPlayer;
 
         // Check for a winner
-        gameWon = ttt.checkWinner(board);
+        gameWon = ttt.checkWin(board);
 
         //switch player's turn only if no one won
         if (currentPlayer == "X" && !gameWon)
