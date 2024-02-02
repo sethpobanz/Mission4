@@ -25,11 +25,13 @@ namespace Mission4
             {
                 return true;
             }
-            return false;
-
+            else
+            {
+                return false;
+            }
         }
 
-        static void PrintBoard()
+        static void printBoard(string[] board)
         {
             Console.WriteLine($" {board[0]} | {board[1]} | {board[2]} ");
             Console.WriteLine("---|---|---");
@@ -37,14 +39,5 @@ namespace Mission4
             Console.WriteLine("---|---|---");
             Console.WriteLine($" {board[6]} | {board[7]} | {board[8]} ");
         }
-
-        // Method 1: Print the board based on the info passed to it
-
-        // Method 2: a method that receives the game board array as input and returns if there is a
-        // winner and who it was
-
-
-
-
     }
 }
