@@ -9,7 +9,8 @@ namespace Mission4
 {
     internal class tictactoetools
     {
-        // Method 1: Print the board based on the info passed to it
+        // Method 1: a method that receives the game board array as input and returns if there is a
+        // winner during that turn. Includes all possible combinations of a win in tic-tac-toe
         public bool checkWin(string[] arr)
         {
             string[] checkWin = (string[])arr;
@@ -42,8 +43,7 @@ namespace Mission4
             }
         }
 
-        // Method 2: a method that receives the game board array as input and returns if there is a
-        // winner and who it was
+        // Method 2: Print the board based on the info passed to it
         public void printBoard(string[] board)
         {
             Console.WriteLine($" {board[0]} | {board[1]} | {board[2]} ");

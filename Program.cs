@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Mission4;
+
 //Section 2 group 7: Seth Pobanz, Madison Hutchings, Teigen Burrows, Martin Villar
 // Tic Tac Toe Game
 
@@ -20,6 +21,8 @@ for (int i = 0; i < board.Length; i++)
 
 
 string currentPlayer = "X"; // Player 'X' goes first
+
+//initialize loop variables
 bool gameWon = false;
 bool boardFull = false;
 
@@ -33,8 +36,9 @@ while (!gameWon && !boardFull)
     Console.WriteLine("Make your pick (0-8) player " + currentPlayer);
     int currentPick = 0;
 
+    
+    //this loop checks for valid input
     bool validInput = false;
-
     while (!validInput)
     {
         string userInput = Console.ReadLine();
@@ -49,13 +53,16 @@ while (!gameWon && !boardFull)
         }
     }
    
+    //if the space is unoccupied, update the board. Otherwise force them to pick a new spot
     if (board[currentPick] == " ")
     {
         board[currentPick] = currentPlayer;
 
+        
         // Check for a winner
         gameWon = ttt.checkWin(board);
 
+        
         //switch player's turn only if no one won
         if (currentPlayer == "X" && !gameWon)
         {
